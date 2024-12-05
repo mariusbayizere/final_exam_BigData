@@ -20,3 +20,4 @@ class Sensor(models.Model):
         Returns the string representation of the Sensor object, which is the sensor's name.
         """
         return self.sensor_name
+
