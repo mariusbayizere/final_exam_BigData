@@ -1,5 +1,5 @@
 from django.db import models
-from .sensor import Sensor  # Import the Sensor model
+from .sensors import Sensor
 
 class Anomaly(models.Model):
     """
@@ -21,6 +21,9 @@ class Anomaly(models.Model):
         ('High', 'High')
     ], blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'Anomaly'
 
     def __str__(self):
         """

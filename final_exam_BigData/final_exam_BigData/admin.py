@@ -1,8 +1,8 @@
 from django.contrib import admin
-from final_exam_BigData.Model.users import User
-from final_exam_BigData.Model.sensors import Sensor
-from final_exam_BigData.Model.sensor_data import SensorData
-from final_exam_BigData.Model.model_training import ModelTraining
+from models_app.users import User
+from models_app.sensors import Sensor
+from models_app.sensor_data import SensorData
+from models_app.model_training import ModelTraining
 
 
 @admin.register(User)

@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'final_exam_BigData',
+    'models_app',
 ]
 
 MIDDLEWARE = [

@@ -14,6 +14,9 @@ class Sensor(models.Model):
     sensor_type = models.CharField(max_length=100, blank=True, null=True)
     location = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+
+    class Meta:
+        db_table = 'Sensor'
     
     def __str__(self):
         """

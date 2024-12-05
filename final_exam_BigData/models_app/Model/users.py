@@ -23,6 +23,10 @@ class User(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     """The timestamp when the user was created."""
 
+
+    class Meta:
+        db_table = 'Users'
+
     def __str__(self):
         """
         Returns the string representation of the User object, which is the

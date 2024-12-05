@@ -20,6 +20,10 @@ class ModelTraining(models.Model):
     recall = models.FloatField()
     description = models.TextField()
 
+
+    class Meta:
+        db_table = 'ModelTraining'
+
     def __str__(self):
         """
         Returns the string representation of the ModelTraining object,
