@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor Data Detail</title>
+</head>
+<body>
+    <h1>Sensor Data</h1>
+    <p>Sensor: {{ entry.sensor.sensor_name }}</p>
+    <p>Value: {{ entry.sensor_value }}</p>
+    <p>Timestamp: {{ entry.timestamp }}</p>
+    <a href="{% url 'sensor_data_list' %}">Back to List</a>
+</body>
+</html>

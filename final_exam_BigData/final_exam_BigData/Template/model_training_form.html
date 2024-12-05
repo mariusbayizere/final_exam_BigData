@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% if form.instance.pk %}Edit{% else %}Create{% endif %} Model Training</title>
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Edit{% else %}Create{% endif %} Model Training</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'model_training_list' %}">Cancel</a>
+</body>
+</html>

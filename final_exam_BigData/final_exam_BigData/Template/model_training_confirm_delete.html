@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Model Training</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete "{{ record.model_version }}"?</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+    <a href="{% url 'model_training_list' %}">Cancel</a>
+</body>
+</html>

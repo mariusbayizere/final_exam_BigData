@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Sensor Data</title>
+</head>
+<body>
+    <h1>Are you sure you want to delete this entry?</h1>
+    <p>Sensor: {{ entry.sensor.sensor_name }}</p>
+    <p>Value: {{ entry.sensor_value }}</p>
+    <p>Timestamp: {{ entry.timestamp }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Confirm</button>
+    </form>
+    <a href="{% url 'sensor_data_list' %}">Cancel</a>
+</body>
+</html>

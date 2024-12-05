@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor List</title>
+</head>
+<body>
+    <h1>Sensor List</h1>
+    <a href="{% url 'sensor_create' %}">Add New Sensor</a>
+    <ul>
+        {% for sensor in sensors %}
+            <li>
+                <a href="{% url 'sensor_detail' sensor.pk %}">{{ sensor.sensor_name }}</a>
+                - {{ sensor.sensor_type }} ({{ sensor.location }})
+                <a href="{% url 'sensor_update' sensor.pk %}">Edit</a>
+                <a href="{% url 'sensor_delete' sensor.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

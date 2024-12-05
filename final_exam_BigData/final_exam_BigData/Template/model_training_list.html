@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Training Records</title>
+</head>
+<body>
+    <h1>Model Training Records</h1>
+    <a href="{% url 'model_training_create' %}">Add New Training Record</a>
+    <ul>
+        {% for record in records %}
+            <li>
+                <a href="{% url 'model_training_detail' record.pk %}">
+                    {{ record.model_version }} - {{ record.accuracy }}
+                </a>
+                <a href="{% url 'model_training_update' record.pk %}">Edit</a>
+                <a href="{% url 'model_training_delete' record.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

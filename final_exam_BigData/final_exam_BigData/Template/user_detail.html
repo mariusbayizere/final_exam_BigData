@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Detail</title>
+</head>
+<body>
+    <h1>User: {{ user.username }}</h1>
+    <p>Role: {{ user.role }}</p>
+    <p>Created At: {{ user.created_at }}</p>
+    <a href="{% url 'user_list' %}">Back to List</a>
+</body>
+</html>

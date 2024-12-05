@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Training Detail</title>
+</head>
+<body>
+    <h1>Model Training {{ record.model_version }}</h1>
+    <p>Accuracy: {{ record.accuracy }}</p>
+    <p>Precision: {{ record.precision }}</p>
+    <p>Recall: {{ record.recall }}</p>
+    <p>Description: {{ record.description }}</p>
+    <p>Trained At: {{ record.training_timestamp }}</p>
+    <a href="{% url 'model_training_list' %}">Back to List</a>
+</body>
+</html>

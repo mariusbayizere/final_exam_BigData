@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sensor Data List</title>
+</head>
+<body>
+    <h1>Sensor Data List</h1>
+    <a href="{% url 'sensor_data_create' %}">Add New Data</a>
+    <ul>
+        {% for entry in data %}
+            <li>
+                <a href="{% url 'sensor_data_detail' entry.pk %}">
+                    {{ entry.sensor.sensor_name }} - {{ entry.sensor_value }} ({{ entry.timestamp }})
+                </a>
+                <a href="{% url 'sensor_data_update' entry.pk %}">Edit</a>
+                <a href="{% url 'sensor_data_delete' entry.pk %}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
